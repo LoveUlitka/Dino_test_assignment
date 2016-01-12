@@ -30,15 +30,11 @@ def dirs_enumeration(start_path):
 
 
 def print_answer(path_to_name):
-    count_files = 0
-    files = []
-    for key, value in path_to_name.items():
-        count_files += 1
-        files.append(value)
-    print('Number of files: ' + str(count_files) + '\n')
+    print('Number of files: ' + str(len(path_to_name)) + '\n')
+
     print('Files:')
-    for i in range(count_files):
-        print(files[i])
+    for key, value in path_to_name.items():
+        print(value)
 
 path_to_name = dirs_enumeration(ENTER_POINT)
 print_answer(path_to_name)
