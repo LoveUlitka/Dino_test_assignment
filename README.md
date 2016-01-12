@@ -2,7 +2,7 @@
 
 Please create a simple application "Counter" using Python as primary development tool 
 (without an additional packages, only common pack). Application details: application 
-should properly count number of *.dll files in C:\Windows\System32 directory and all 
+should properly count number of .dll files in C:\Windows\System32 directory and all 
 sub directories which starts from "a" symbol. 
 
 Input data: no input required. 
