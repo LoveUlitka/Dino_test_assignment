@@ -1,8 +1,8 @@
 import os
 import os.path
 
-ENTER_POINT = 'C:\\Users\\Ulitka\\Desktop\\n\\'
-FILE_EXT = '.jpg'
+ENTER_POINT = 'C:\\Windows\\System32\\'
+FILE_EXT = '.dll'
 DIR_PREFIX = 'a'
 DELIM = '\\'
 
@@ -25,9 +25,20 @@ def dirs_enumeration(start_path):
 
     while dirs:
         sub_path = dirs.pop()
-        items_enumeration(start_path, path_to_name, dirs)
+        items_enumeration(sub_path, path_to_name, dirs)
     return path_to_name
 
 
 def print_answer(path_to_name):
-    for key, value in d.items():
+    count_files = 0
+    files = []
+    for key, value in path_to_name.items():
+        count_files += 1
+        files.append(value)
+    print('Number of files: ' + str(count_files) + '\n')
+    print('Files:')
+    for i in range(count_files):
+        print(files[i])
+
+path_to_name = dirs_enumeration(ENTER_POINT)
+print_answer(path_to_name)
